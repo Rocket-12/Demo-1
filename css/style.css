@@ -214,6 +214,7 @@ a {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .Education-box {
@@ -223,6 +224,7 @@ a {
     padding: 20px;
     /* margin-top: 20px; */
     margin: 20px;
+    box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -272,34 +274,6 @@ a {
 }
 
 
-#services {
-    padding: 100px 50px;
-}
-
-.services-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.services-box {
-    flex-basis: 25%;
-    text-align: center;
-    box-shadow: 2px 3px 5px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.services-box:hover {
-    background-color: #e74c3c;
-    color: white;
-    transition: 0.4s;
-}
-
-.services-box img {
-    width: 60%;
-}
 
 #contact {
     padding: 20px 50px;
@@ -350,57 +324,88 @@ a {
     font-size: 15px;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width :1210px) {
     header {
         background: url('../images/bg1.jpeg');
         background-size: cover;
-
     }
 
     .menu a {
         display: none;
     }
-
+    
+    header {
+        width: 100%;
+        height: 100vh;
+        background: url('../images/b1.png'), url('../images/bg1.jpeg');
+        background-size: 50% 50%, cover;
+        background-position: right, center;
+        background-repeat: no-repeat, no-repeat;
+        background-attachment: fixed;
+    
+    }
+    
     .logo {
-        padding-left: 50px;
+        color: white;
+        font-size: 40px;
+        padding-left: 30px;
+        letter-spacing: 5px;
+    }
+    
+    .logo {
+        padding-left: 40px;
     }
 
     .text {
         margin-left: 50px;
     }
 
-
-
     .about-left-col {
         flex-basis: 100%;
     }
 
-    .about-left-col img {
-        width: 100%;
-        padding: 50px;
-    }
-
-
-    .skills-left-col {
-        flex-basis: 100%;
+    #self-img {
+        width: 65%;
+        height: auto;
+        box-sizing: border-box;
+        border:3px solid rgb(101, 96, 96);
+        border-radius: 70px;
+        padding: 9px;
     }
 
     .about-right-col {
         flex-basis: 100%;
+        margin-top: 30px;
+        color: green;
+    }
+
+    .skills-left-col {
+        flex-basis: 60%;
     }
 
     .Education-box {
-        flex-basis: 100%;
+        flex-basis: 60%;
         margin-top: 20px;
         font-size: 15px;
+        color: brown;
     }
 
     .Education-box img {
         width: 20%;
     }
 
-    .contact-left-col {
+    #Project {
+        padding: 100px 50px;
+    }
+
+    .Project-box {
         flex-basis: 100%;
+        color: blue;
+        box-sizing: border-box;
+    }
+
+    .contact-left-col {
+        flex-basis: 50%;
     }
 
     .contact-right-col {
@@ -412,4 +417,3 @@ a {
         margin: 10px;
     } 
 }
-
